@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Scribble Sync</title>
+
+        <link rel="stylesheet" href="css/jquery.dropdown.css">
+        <link rel="stylesheet" href="css/cf.css">
+
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+        <script type="text/javascript" src="js/socket.io.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/sync-back.js"></script>
+    </head>
+    <body>
+        <div id="mainSection" class="page active">
+            <div class="cf-header">
+                <img src="img/scribble-logo-full.svg">
+            </div>
+            <div class="cf-body">
+                <div id="syncForm" class="active">
+                    <p class="cf-body-header">Sync Back Artboards</p>
+                    <!--<p class="cf-body-desc">Select correct project and scale value to sync!</p>-->
+                    <div class="cf-body-form">
+                        <div class="cf-body-form-body cf-body-form-select">
+                            <label>Select Project</label>
+                            <div id="selectProjectLoading">Loading Projects...</div>
+                            <select id="selectProject" style="display:none;"></select>
+                        </div>
+                        <div class="cf-body-form-body">
+                            <div class="cf-radio">
+                                <label class="cf-radio-container">
+                                    All artboards on active page
+                                    <input type="radio" id="syncAll" name="isSyncAll" value="true" checked="checked">
+                                    <span class="cf-radio-check"></span>
+                                </label>
+                                <label class="cf-radio-container">
+                                    Only selected artboards
+                                    <input type="radio" id="syncSelected" name="isSyncAll" value="false">
+                                    <span class="cf-radio-check"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="cf-body-form-body">
+                            <button id="syncBtn" class="btn btn-primary btn-action active" disabled="disabled">Sync Back</button>
+                            <div id="cfProgressBar" class="loader-progress">
+                                <div id="cfProgress"></div>
+                                <div id="cfProgressFilled"></div>                               
+                                <div id="cfProgressPercentage">Syncing Artboards...<span id="cfProgressPercentageValue">0</span>%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cf-footer">
+                <a id="logoutBtn" href="#">Logout</a>
+            </div>
+        </div>
+        <div id="completeSection" class="page">
+            <div class="cf-header">
+                <img src="img/scribble-logo-full.svg">
+            </div>
+            <div class="cf-body">
+                <div class="sync-complete active">
+                    <img src="img/sync-complete.svg" alt="sync complete">
+                    <div class="sync-complete-text">Sync Completed</div>
+                    <div class="sync-complete-text-copy">COPY URL:</div>
+                    <textarea id="syncCompleteText" rows="3"></textarea>
+                    <button id="goToPreview" class="btn btn-primary btn-action active">OPEN IN SCRIBBLE</button>
+                </div>
+            </div>
+        </div>
+        <div id="loadSection" class="page">
+            <div>
+                <div>
+                    <div class="btn-loader"></div>
+                    <div class="btn-loader-text">Please Wait</div>
+                </div>
+            </div>
+        </div>
+        <div id="updateSection" class="page">
+            <div>
+                <div>
+                    <p class="cf-body-header">This plugin is out of date.</p>
+                    <button id="getLatestPlugin" class="btn btn-primary">Get latest plugin</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

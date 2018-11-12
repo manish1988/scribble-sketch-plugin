@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Scribble Login</title>
+
+        <link rel="stylesheet" href="css/cf.css">
+        <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body>
+        <div id="mainSection" class="page active">
+            <div class="cf-header">
+                <img src="img/scribble-logo-full.svg">
+            </div>
+            <div class="cf-body">
+                <div id="loginForm" class="active">
+                    <p class="cf-body-header">Login</p>
+                    <div class="cf-body-form">
+                        <div class="cf-body-form-body">
+                            <div class="cf-body-form-body-label">Email ID</div>
+                            <input type="email" id="emailID">
+                        </div>
+                        <div class="cf-body-form-body">
+                            <div class="cf-body-form-body-label">Password</div>
+                            <a class="login-forgot" id="forgotPassword1" href="#">Forgot?</a>
+                            <input type="password" id="password" placeholder="Password">
+                        </div>
+                        <div class="cf-body-form-body">
+                            <button class="btn btn-primary" id="loginBtn">Login</button>
+                            <div id="loginError">
+                                Invalid Email ID or Password.</br><a id="forgotPassword2" href="#">Forgot Password?</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cf-footer">
+                <div id="createNewAccount">
+                    <span>New to Scribble?</span>
+                    <a href="#">Create Account</a>
+                </div>
+            </div>
+        </div>
+        <div id="updateSection" class="page">
+            <div>
+                <div>
+                    <p class="cf-body-header">This plugin is out of date.</p>
+                    <button id="getLatestPlugin" class="btn btn-primary">Get latest plugin</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
