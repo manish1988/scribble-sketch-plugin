@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Scribble Sketch Plugin</title>
+        <link>https://github.com/manish1988/scribble-sketch-plugin</link>
+        <description>Sync and generate copy tool from sketch artboards to Scribble.</description>
+        <language>en</language>
+        <item>
+            <title>Scribble Sketch Plugin 2.0.0</title>
+            <description>
+          <![CDATA[
+            <ul>
+              <li>Complete Refactor and Fixes for Sketch 52</li>
+            </ul>
+          ]]>
+            </description>
+            <enclosure url="https://github.com/manish1988/scribble-sketch-plugin/releases/download/v2.0.0/scribble-sketch-plugin.zip" sparkle:version="2.0.0" />
+        </item>
+    </channel>
+</rss>
