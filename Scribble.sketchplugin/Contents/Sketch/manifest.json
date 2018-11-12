@@ -3,10 +3,11 @@
     "description": "Sync and generate copy tool from sketch artboards to Scribble",
     "author": "Scribble",
     "homepage": "https://www.canvasflip.com/visual-inspector/scribble/",
-    "version": 1.0,
     "identifier": "com.canvasflip.scribble_sketch_plugin",
     "updateURL": "https://www.canvasflip.com/visual-inspector/scribble/",
+    "version": "2.0.0",
     "compatibleVersion": 3,
+    "bundleVersion": 1,
     "commands": [
         {
             "name": "Sync Artboards To Scribble",
